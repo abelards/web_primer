@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Web Architecture - A Primer</title>
+    <meta name="author" content="Sylvain Abélard" />
+    <meta content="True" name="HandheldFriendly" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="light.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <script type="text/javascript" src="webarch.js"></script>
+  </head>
+  <body>
+
+ <a id="GitHubFork" href="https://github.com/abelards/web_primer">
+   <span class="alt">Fork on GitHub</span>
+ </a>
+
+<div class="content" id="title">
+ <h1>Web Architecture</h1>
+ <h3>The
+   <span class="short">big</span>
+   <span class="txt">wonderful</span>
+   journey of a tiny request.
+ </h3>
+</div>
+
+<div id="keywords"><div class="content">
+ <h2>Keywords</h2>
+ <p class="help">
+  Hover your mouse over these words
+  <span class="lng">or the schema to get more information</span>
+ </p>
+ <ul>
+  <li id="client_side"><h4>Client-side:</h4></li>
+  <li id="user">User</li>
+  <li id="browser">Browser</li>
+
+  <li id="internet"><h4>Internet:</h4></li>
+  <li id="request">Request</li>
+  <li id="network">Network</li>
+  <li id="response">Response</li>
+
+  <li id="web_server"><h4>Web server:</h4></li>
+  <li id="server">Server</li>
+  <li id="files">Files</li>
+  <li id="routing">Routing</li>
+
+  <li id="application"><h4>Application:</h4></li>
+  <li id="app_server">App Server</li>
+  <li id="controller">Controller</li>
+  <li id="model">Model</li>
+  <li id="model">Views</li>
+
+  <li id="databases"><h4>Databases:</h4></li>
+  <li id="db">Database</li>
+
+ </ul>
+
+ <ul id="technical">
+  <li id="vocabulary"><h4>Vocabulary:</h4></li>
+  <li id="cookies">Cookies
+    <div class="tooltip">
+      These are some bits of data the browser keeps about you.<br />
+      They are sent to the server with each request, allowing to
+      remember you language, some settings, or identifying you uniquely.
+      The server can also write cookies.
+    </div>
+  </li>
+  <li id="url_uri">URL
+    <div class="tooltip">
+      What you see and type in the browser Address Bar.<br />
+      By the way, this means Universal Resource (Locator, Identifier).
+      They are supposed to point to the exact same resource each time,
+      but we developers have overlooked this far too often.
+    </div>
+  </li>
+  <li id="dns">DNS
+    <div class="tooltip">
+      Computers cannot find each other by name, but by IP.<br />
+      Domain Name Service is some kind of address book which do exactly this.
+    </div>
+  </li>
+  <li id="framework">Framework
+    <div class="tooltip">
+      A framework is a (usually big) piece of software that do many things for you.<br />
+      It also allows you to use very little code to mean a lot of
+      things, and therefore is likely to shape the way you think or
+      express things. It encourages code reuse and some practices.<br />
+      A framework also lives with its community and tools around it,
+      like testing, deploying to production servers, and so on.
+    </div>
+  </li>
+  <li id=""></li>
+ </ul>
+
+</div></div>
+
+<div class="content" id="page">
+
+  <div class="client_side group">Client
+    <div class="item user">
+      <div class="down">1. Click links or type URLs in your browser</div>
+      <div>User
+	<div class="tooltip">That's you ;)
+	</div>
+      </div>
+    </div>
+
+    <div class="item browser">
+      <div class="up">17. You browser prints out HTML nicely, or informs you about what happened.<br />
+	That's also where JavaScript is run, so you can have rich interactions.
+      </div>
+      <div class="down">2. The browser sends out a request.</div>
+      <div>Browser
+	<div class="tooltip">
+	  That's the application you use to browse the Internet.<br />
+	  Examples: Firefox, Chrome, Safari, Opera...
+	  there's Internet Explorer too, but we developers love to hate it ;)
+	</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="internet group">Internet
+    <div class="item request">
+      <div class="down">3. The requests is sent on the network (eg. Internet).</div>
+      <div>Request
+	<div class="tooltip">
+	  That's information about who you are and what you want.
+	  Who you are: it depends, but mostly your IP (who to answer to),
+          some imformation about your computer (browser you use, screen size, cookies).
+	  What you want: the URL and some parameters.
+	</div>
+      </div>
+    </div>
+
+    <div class="item network">
+      <div class="up">16. All the way back!</div>
+      <div class="down">4. A network of links and equipments will find where your request should go.</div>
+      <div>Network
+	<div class="tooltip">
+	  The Internet is a series of tubes?
+	  More like a mesh of servers, linked by connections like cable,
+	  fiber, wifi or satellite links.
+	</div>
+     </div>
+    </div>
+
+    <div class="item response">
+      <div class="up">15. The response is sent back, the same way the request was sent.</div>
+      <div>Response
+	<div class="tooltip">
+	  You asked a question, the web server answers you.
+	  This is the response you waited, with your carefully crafted content.
+	</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="web_server group">Web Server
+    <div class="item server">
+      <div class="up">14. The web server sends back what the app server gave it.</div>
+      <div class="down">5. The web server gets the request, and finds out if it can send a file or call other pieces of software.</div>
+      <div>Server
+	<div class="tooltip">
+	  This means both a machine (or several machines),
+	  or a piece of software which purpose is to handle your request,
+	  then calling any other piece of software the programmers decide,
+	  then sending back a response.
+	</div>
+     </div>
+    </div>
+
+    <div class="item files">
+      <div class="down">6a. The web server could find a file to send directly.</div>
+      <div>Files
+	<div class="tooltip">
+	  If there is no clever stuff involved, and you asked for a file
+	  like a picture (which is not supposed to change often), the server
+	  can send it back very quickly, and avoid calling 'clever' code.
+	</div>
+     </div>
+    </div>
+
+    <div class="item routing">
+      <div class="down">6b. Some routing rules (either on the web server, app server or both) are used to send the request where it's appropriate.</div>
+      <div>Routing
+	<div class="tooltip">
+	  There are plenty of things you can do,
+	  so there are plenty of code bits too.
+	  The routing is responsible for calling the right piece of code.
+	</div>
+     </div>
+    </div>
+  </div>
+
+
+  <div class="application group">Application
+    <div class="item app_server">
+      <div class="up">13. Sends the HTML back. If you didn't render a view, you should return raw data, status codes, or redirections.</div>
+      <div class="down">7. This is where the code is involved!</div>
+      <div>App Server
+	<div class="tooltip">
+	  The app server runs the code. It needs to do smarter things than
+	  the web server, so we often like to separate them, just in case
+	  the full-fledged App Server is not required and the Web Server
+	  is enough to do the job.
+	</div>
+     </div>
+    </div>
+
+    <div class="item view">
+      <div class="up">12. the view is rendered with the data that came back.</div>
+      <div>Views
+	<div class="tooltip">
+	  Views are mostly HTML snippets, with placeholders the Controller will fill.
+	</div>
+      </div>
+    </div>
+
+    <div class="item controller">
+      <div class="up">11. The controller can also apply application rules once it gets the data from the model.</div>
+      <div class="down">8. The app server calls an action to handle the request.</div>
+      <div>Controller
+	<div class="tooltip">
+	  If you use an MVC framework, the Controller handles the request.
+	  The controller does some application logic.<hr />
+	  Controller code can do some security checks, then ask for the
+	  right pieces of data from the Model, run the View, and send you
+	  back some kind of response: content, files, or maybe a redirection,
+	  which is his way of saying "someone else should handle this".
+	</div>
+     </div>
+    </div>
+
+    <div class="item model">
+      <div class="up">10. The model can still adapt and apply business rules once it gets the data.</div>
+      <div class="down">9. The model answers to each question the controller asks him.</div>
+      <div>Model
+	<div class="tooltip">
+	  If you use and MVC framework, the Controller asks the Model for data.
+	  The model knows some business logic, and connects to the database.<hr />
+	  How to know if code should go into the model or controller? If<ul>
+	    <li>you make something that is not a web app, and the rules would be the same</li>
+	    <li>you make several applications, and this logic is the same across all these</li>
+	    <li>the controller is too long, you should probably put some code in the model to "help" it</li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="databases group">Databases
+    <div class="item db">
+      <div class="up"></div>
+      <div class="down">10. the database queries data or writes the updates.</div>
+      <div>Database
+	<div class="tooltip">
+	  The database is where your data is stored safely.
+	  These run very specialized software, optimised for fast search and/or high availability.<br />
+	  Each one ensures some properties, like keeping the data even if there is a power outage.
+	</div>
+     </div>
+    </div>
+  </div>
+
+ </div>
+
+</body>
+</html>

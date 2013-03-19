@@ -1,0 +1,215 @@
+@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+@import url('http://fonts.googleapis.com/css?family=Josefin+Sans');
+
+body {
+ font-family: Quicksand, Helvetica, Arial, sans-serif;
+ font-size: 16px;
+ font-weight: 300;
+ line-height: 20px;
+ color: #555555;
+ background-color: white;
+ margin: 0;
+}
+
+fieldset {
+  border: none;
+  padding: 1px;
+  margin: 1px;
+}
+
+input[type=text] {
+  width: 98%;
+}
+
+#keywords {
+ background: #F0F0F0;
+ background: #E0FFF0;
+}
+#keywords .content { width: 100%;  text-align: left; }
+#keywords li { pointer: cursor; color: #00BD42; width: 10em; }
+#keywords li:hover { background-color: #BBFBD1; }
+
+#keywords p { margin: 0; }
+.short { display: none; }
+.alt { display: none; }
+
+.group {
+  color: #999999;
+  border: 1px solid silver;
+  width: 14em;
+  margin: 1em auto;
+  background: #F7F7F7;
+}
+.item {
+  color: #333333;
+  background: #EEEEEE;
+  width: 10em;
+  padding: 1em;
+  margin: 0.75em;
+}
+
+.active { background-color: #D1BBFB; }
+.focus { background-color: #BBFBD1; }
+
+.tooltip { display:none;
+  position: absolute;
+  font-size: 80%;
+  width: 16em;
+  border: 1px outset #00AA33;
+  background: #E0FFF0;
+  padding: 3px;
+  color: #00AA33;
+}
+div:hover > .tooltip { display: block; }
+li:hover > .tooltip { display: block; }
+
+.up, .down {
+ width: 2em;
+ height: 1.5em;
+ overflow: hidden;
+ font-size: 80%;
+}
+.up:hover, .down:hover {
+ position: absolute;
+ font-size: 80%;
+ width: 15em;
+ height: auto;
+ border: 1px outset #999922;
+ background: #FFFFE0;
+ color: #999922;
+}
+.up { float: right; }
+.down { float: left; }
+.up:before { content: '\2191' }
+.down:before { content: '\2193' }
+
+
+h1,h2,h3,h4,h5,h6{
+ margin: 0;
+ font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+ font-weight: bold;
+}
+
+p {
+  margin: 0.25em 1em 1em 1em;
+  word-wrap: break-word;
+}
+p.help {
+  font-size: 75%;
+  width: 90%;
+}
+p.breaking {
+ padding: 0.25em 0.5em;
+ background: #FAFAFA;
+ border-top: 1px solid silver;
+ border-bottom: 1px solid silver;
+}
+
+img {
+ border:0;
+ width:auto;
+ height:auto;
+ max-width:100%;
+ vertical-align:middle;
+ -ms-interpolation-mode:bicubic;
+}
+a img { width: 16px; height: 16px; }
+
+ul,ol {
+ clear:both;
+ padding:0;
+ margin: 0;
+ list-style-type: none;
+}
+ul ul,ul ol,ol ol,ol ul { margin-bottom:0; }
+li { line-height:20px; }
+
+hr { clear:both; } // display:none; }
+.fl { float:left; margin-left:1em; }
+
+h1 { font-size:36px; line-height:55px; font-weight:300;
+     font-family: Quicksand, Helvetica, sans-serif;
+     text-align: center; }
+h2 { font-size:32px; line-height:32px; font-weight:400;
+     margin-top: 0.5em; }
+h3 { font-size:22px; line-height:32px; font-weight:400;
+     padding-left: 0.5em; }
+
+a { color:#3E86AA;text-decoration:none; font-weight:500; }
+a:hover { color:#33475F;text-decoration:underline; }
+h3 a { font-weight:700; }
+li h4 { margin-top: 0.75em; }
+
+.content {
+ text-align: center;
+ margin: 0 1em;
+ clear: both;
+}
+
+@media screen and (min-width:870px) {
+ #title {
+  position:absolute;
+  left: 20%;
+ }
+ #page {
+  position:absolute;
+  left: 25%;
+  top: 5em;
+ }
+ #keywords {
+  width: 190px;
+  position: absolute;
+  height: 100%;
+ }
+}
+
+#GitHubFork {
+ position: absolute;
+ top: 0;
+ right: 0;
+ border: 0;
+ height: 149px;
+ width: 149px;
+ z-index: 42;
+ background: url("https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png");
+ border: none;
+ text-align: right;
+}
+
+@media screen and (max-width:870px) {
+ #keywords {
+  background-image: none;
+  position: relative;
+  padding: 0.25em;
+  min-height: 7.5em;
+  width: 98%;
+  margin: auto;
+ }
+
+ #keywords h2 { display: none; }
+ hr, h4 { display: none; }
+ ul li {float:left; }
+}
+
+@media screen and (max-width:750px) {
+ #keywords { min-height: 9em; }
+}
+
+@media screen and (max-width:650px) {
+ #keywords { min-height: 10em; }
+}
+
+@media screen and (max-width:500px) {
+ #keywords { min-height: 12.5em; }
+}
+
+@media screen and (max-width:600px) {
+ .lng { display:none; }
+ .alt { display: inline; }
+ #GitHubFork { background: none; }
+}
+
+@media screen and (max-width:450px) {
+ .txt { display:none; }
+ .short { display: inline; }
+}
