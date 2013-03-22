@@ -127,7 +127,7 @@ li { line-height:20px; }
 hr { clear:both; } // display:none; }
 .fl { float:left; margin-left:1em; }
 
-h1 { font-size:36px; line-height:55px; font-weight:300;
+h1 { font-size:36px; line-height:45px; font-weight:300;
      font-family: Quicksand, Helvetica, sans-serif;
      text-align: center; }
 h2 { font-size:32px; line-height:32px; font-weight:400;
@@ -206,7 +206,13 @@ li h4 { margin-top: 0.75em; }
 @media screen and (max-width:600px) {
  .lng { display:none; }
  .alt { display: inline; }
- #GitHubFork { background: none; }
+ #GitHubFork {
+  background: none;
+  height: 1.5em;
+  width: 8em;
+  padding: 0 0.5em;
+ }
+ h1 { padding: 0.5em 0 0 0; }
 }
 
 @media screen and (max-width:450px) {
