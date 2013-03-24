@@ -1,4 +1,11 @@
 # Web Architecture Primer
+Follow the journey of a web request, from your click to your reading the content you asked for.
+
+## HOWTO use it
+* hover on a word to get a short definition
+* hover over a number to see what happens at this step
+* on mobile, touching instead of clicking ;)
+
 
 ## Why?
 

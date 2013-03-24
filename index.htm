@@ -112,7 +112,7 @@
     </div>
 
     <div class="item browser">
-      <div class="up">17. You browser prints out HTML nicely, or informs you about what happened.<br />
+      <div class="up">18. You browser prints out HTML nicely, or informs you about what happened.<br />
 	That's also where JavaScript is run, so you can have rich interactions.
       </div>
       <div class="down">2. The browser sends out a request.</div>
@@ -140,7 +140,7 @@
     </div>
 
     <div class="item network">
-      <div class="up">16. All the way back!</div>
+      <div class="up">17. All the way back!</div>
       <div class="down">4. A network of links and equipments will find where your request should go.</div>
       <div>Network
 	<div class="tooltip">
@@ -152,7 +152,7 @@
     </div>
 
     <div class="item response">
-      <div class="up">15. The response is sent back, the same way the request was sent.</div>
+      <div class="up">16. The response is sent back, the same way the request was sent.</div>
       <div>Response
 	<div class="tooltip">
 	  You asked a question, the web server answers you.
@@ -164,7 +164,7 @@
 
   <div class="web_server group">Web Server
     <div class="item server">
-      <div class="up">14. The web server sends back what the app server gave it.</div>
+      <div class="up">15. The web server sends back what the app server gave it.</div>
       <div class="down">5. The web server gets the request, and finds out if it can send a file or call other pieces of software.</div>
       <div>Server
 	<div class="tooltip">
@@ -177,7 +177,8 @@
     </div>
 
     <div class="item files">
-      <div class="down">6a. The web server could find a file to send directly.</div>
+      <div class="up">&nbsp; Files are sent back directly.</div>
+      <div class="ret">The web server could find a file to send directly.</div>
       <div>Files
 	<div class="tooltip">
 	  If there is no clever stuff involved, and you asked for a file
@@ -188,7 +189,7 @@
     </div>
 
     <div class="item routing">
-      <div class="down">6b. Some routing rules (either on the web server, app server or both) are used to send the request where it's appropriate.</div>
+      <div class="down">6. Some routing rules (either on the web server, app server or both) are used to send the request where it's appropriate.</div>
       <div>Routing
 	<div class="tooltip">
 	  There are plenty of things you can do,
@@ -202,7 +203,7 @@
 
   <div class="application group">Application
     <div class="item app_server">
-      <div class="up">13. Sends the HTML back. If you didn't render a view, you should return raw data, status codes, or redirections.</div>
+      <div class="up">14. Sends the HTML back. If you didn't render a view, you should return raw data, status codes, or redirections.</div>
       <div class="down">7. This is where the code is involved!</div>
       <div>App Server
 	<div class="tooltip">
@@ -215,7 +216,7 @@
     </div>
 
     <div class="item view">
-      <div class="up">12. the view is rendered with the data that came back.</div>
+      <div class="up">13. the view is rendered with the data that came back.</div>
       <div>Views
 	<div class="tooltip">
 	  Views are mostly HTML snippets, with placeholders the Controller will fill.
@@ -224,7 +225,7 @@
     </div>
 
     <div class="item controller">
-      <div class="up">11. The controller can also apply application rules once it gets the data from the model.</div>
+      <div class="up">12. The controller can also apply application rules once it gets the data from the model.</div>
       <div class="down">8. The app server calls an action to handle the request.</div>
       <div>Controller
 	<div class="tooltip">
@@ -239,7 +240,7 @@
     </div>
 
     <div class="item model">
-      <div class="up">10. The model can still adapt and apply business rules once it gets the data.</div>
+      <div class="up">11. The model can still adapt and apply business rules once it gets the data.</div>
       <div class="down">9. The model answers to each question the controller asks him.</div>
       <div>Model
 	<div class="tooltip">
@@ -258,8 +259,8 @@
 
   <div class="databases group">Databases
     <div class="item db">
-      <div class="up"></div>
-      <div class="down">10. the database queries data or writes the updates.</div>
+      <div class="up">10. the database queries data or writes the updates.</div>
+      <div class="ret"></div>
       <div>Database
 	<div class="tooltip">
 	  The database is where your data is stored safely.

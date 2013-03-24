@@ -63,13 +63,15 @@ input[type=text] {
 div:hover > .tooltip { display: block; }
 li:hover > .tooltip { display: block; }
 
-.up, .down {
+.up, .down, .ret {
  width: 2em;
  height: 1.5em;
  overflow: hidden;
  font-size: 80%;
 }
-.up:hover, .down:hover {
+.ret { width: 1em; }
+
+.up:hover, .down:hover, .ret:hover {
  position: absolute;
  font-size: 80%;
  width: 15em;
@@ -79,9 +81,10 @@ li:hover > .tooltip { display: block; }
  color: #999922;
 }
 .up { float: right; }
-.down { float: left; }
+.down, .ret { float: left; }
 .up:before { content: '\2191' }
 .down:before { content: '\2193' }
+.ret:before { content: '\21B3' }
 
 
 h1,h2,h3,h4,h5,h6{
