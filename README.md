@@ -6,6 +6,12 @@ Follow the journey of a web request, from your click to your reading the content
 * hover over a number to see what happens at this step
 * on mobile, touching instead of clicking ;)
 
+## TODO
+* use pretty icons
+* get people's feedback on the idea and texts
+* use JS Plumb
+    - to make it clear? http://jsplumbtoolkit.com/jquery/flowchartConnectorsDemo.html
+    - to make a game? http://jsplumbtoolkit.com/jquery/draggableConnectorsDemo.html
 
 ## Why?
 
