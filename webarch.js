@@ -1,14 +1,14 @@
 function setup() {
 
- $('#keywords li').on('mouseenter', function(e) {
+ $('.content li').on('mouseenter', function(e) {
 	 $('.' + $(this).attr('id') ).addClass('focus');
  })
 
- $('#keywords li').on('mouseleave', function(e) {
+ $('.content li').on('mouseleave', function(e) {
 	 $('.' + $(this).attr('id') ).removeClass('focus');
  })
 
- $('#keywords li').on('click', function(e) {
+ $('.content li').on('click', function(e) {
 	 $(this).toggleClass('active');
 	 $('.' + $(this).attr('id') ).toggleClass('active');
  })

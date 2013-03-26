@@ -13,15 +13,39 @@
   </head>
   <body>
 
- <a id="GitHubFork" href="https://github.com/abelards/web_primer">
-   <span class="alt">Fork on GitHub</span>
- </a>
+<div id="navbar">
 
-<div class="content" id="title">
+ <div id="railsgirls">
+  <a href="http://guides.railsgirls.com">RailsGirls Guides</a>
+ </div>
+
+ <div><a>About</a>
+  <div class="tooltip">
+   This cheat sheet is intended as a short overview of how the Web works.
+   It was made for RailsGirls, so it's oriented for MVC frameworks and Ruby.
+  </div>
+ </div>
+
+ <div id="flags" class="tabs">
+  <a id="en" href="./index.htm">EN</a>
+  <a id="fr" href="./fr.htm">FR</a>
+  <a id="es" href="./es.htm">ES</a>
+ </div>
+
+ <div>
+   <a class="tab" href="https://github.com/abelards/web_primer">
+     <span class="txt">Fork on </span>GitHub</a>
+ </div>
+ <a id="GitHubFork" href="https://github.com/abelards/web_primer"></a>
+
+</div>
+
+ <div class="content" id="title">
  <h1><a title="See in action with GitHub HTML preview"
 	href="http://htmlpreview.github.com/?https://github.com/abelards/web_primer/blob/master/index.htm">
   Web Architecture
  </a></h1>
+
  <h3>The
    <span class="short">big</span>
    <span class="txt">wonderful</span>
@@ -29,40 +53,76 @@
  </h3>
 </div>
 
-<div id="keywords"><div class="content">
- <h2>Keywords</h2>
+<div id="sidebar">
+<div class="content">
  <p class="help">
-  Hover your mouse over these words
-  <span class="lng">or the schema to get more information</span>
+  <span class="lng">Hover your mouse over</span>
+  <span class="tab">Touch</span> these words
+  or the schema to get more information</span>
  </p>
+
+<div class="keywords">
+ <h2>Keywords</h2>
  <ul>
-  <li id="client_side"><h4>Client-side:</h4></li>
+  <li id="client_side" class="cat"><h4>Client-side:</h4></li>
   <li id="user">User</li>
   <li id="browser">Browser</li>
 
-  <li id="internet"><h4>Internet:</h4></li>
+  <li id="internet" class="cat"><h4>Internet:</h4></li>
   <li id="request">Request</li>
   <li id="network">Network</li>
   <li id="response">Response</li>
 
-  <li id="web_server"><h4>Web server:</h4></li>
+  <li id="web_server" class="cat"><h4>Web server:</h4></li>
   <li id="server">Server</li>
   <li id="files">Files</li>
   <li id="routing">Routing</li>
 
-  <li id="application"><h4>Application:</h4></li>
+  <li id="application" class="cat"><h4>Application:</h4></li>
   <li id="app_server">App Server</li>
   <li id="controller">Controller</li>
   <li id="model">Model</li>
   <li id="model">Views</li>
 
-  <li id="databases"><h4>Databases:</h4></li>
+  <li id="databases" class="cat"><h4>Databases:</h4></li>
   <li id="db">Database</li>
 
  </ul>
+</div>
+
+<div class="vocabulary">
+  <h2>Vocabulary</h2>
 
  <ul id="technical">
-  <li id="vocabulary"><h4>Vocabulary:</h4></li>
+  <li id="html">HTML
+    <div class="tooltip">
+      HTML is a "language" we use to describe interface and content.
+      It's what your code sends back, and what your browser displays.
+      <br />
+      <a class="wp" href="http://en.wikipedia.org/wiki/HTML">HTML</a>
+    </div>
+  </li>
+  <li id="css">CSS
+    <div class="tooltip">
+      CSS is a "language" to describe how you apply styles in your HTML page.
+      It's used to separate the form (colors, layout) from the content (HTML).
+    </div>
+  </li>
+  <li id="js">JS
+    <div class="tooltip">
+      JavaScript is a language that runs on the client-side.
+      If we want to make some smart behaviour to your users, without
+      the usual request / page rendering cycle, you'd use JS.
+    </div>
+  </li>
+  <li id="ajax">AJAX
+    <div class="tooltip">
+      Sometimes, while doing a smart behaviour, you'd like some more
+      data from the server, but still want to avoid the usual request
+      / page rendering. You'd ask for a little data in XML or JSON,
+      or some HTML smippet. We call this an AJAX request.
+    </div>
+  </li>
   <li id="cookies">Cookies
     <div class="tooltip">
       These are some bits of data the browser keeps about you.<br />
@@ -99,11 +159,13 @@
  </ul>
 
 </div></div>
+</div>
 
 <div class="content" id="page">
 
   <div class="client_side group">Client
     <div class="item user">
+      <div class="noup"></div>
       <div class="down">1. Click links or type URLs in your browser</div>
       <div>User
 	<div class="tooltip">That's you ;)
@@ -128,6 +190,7 @@
 
   <div class="internet group">Internet
     <div class="item request">
+      <div class="noup"></div>
       <div class="down">3. The requests is sent on the network (eg. Internet).</div>
       <div>Request
 	<div class="tooltip">
@@ -153,6 +216,7 @@
 
     <div class="item response">
       <div class="up">16. The response is sent back, the same way the request was sent.</div>
+      <div class="nodown"></div>
       <div>Response
 	<div class="tooltip">
 	  You asked a question, the web server answers you.
@@ -189,6 +253,7 @@
     </div>
 
     <div class="item routing">
+      <div class="noup"></div>
       <div class="down">6. Some routing rules (either on the web server, app server or both) are used to send the request where it's appropriate.</div>
       <div>Routing
 	<div class="tooltip">
@@ -217,6 +282,7 @@
 
     <div class="item view">
       <div class="up">13. the view is rendered with the data that came back.</div>
+      <div class="nodown"></div>
       <div>Views
 	<div class="tooltip">
 	  Views are mostly HTML snippets, with placeholders the Controller will fill.
