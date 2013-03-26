@@ -25,8 +25,7 @@ body {
 }
 
 #navbar div { float: left; margin: 0.25em 0; padding: 0 0.5em;
-  border-right: 1px solid #FFAA88; }
-#navbar div.tooltip { border-right: 1px solid #6F1607; }
+border-right: 1px solid #FFAA88; }
 
 #navbar a { font-weight: bold; color: white; }
 #flags li { width: 2.5em; text-align: center; }
