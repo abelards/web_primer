@@ -31,11 +31,14 @@ body {
 #navbar a { font-weight: bold; color: white; }
 #flags li { width: 2.5em; text-align: center; }
 
+#navbar #about hr { display: block; border-color: #C2260D; }
+#navbar #about .tooltip a { color: #C2260D; text-decoration: underline; }
+
 #sidebar { background: #F3562B; color: white; }
 #sidebar .content { width: 100%;  text-align: left; }
 #sidebar p { margin: 0; }
 
-li {
+ul li {
   line-height:20px; margin: 1px; padding: 1px;
   pointer: cursor; color: white; width: 10em;
 }
@@ -57,7 +60,7 @@ li:hover { background-color: #D3360B; }
 }
 
 .active, .focus, .item.active { background-color: #FFAA88; }
-.tooltip { display:none; }
+.tooltip { display:none; text-align: left; }
 div:hover > .tooltip { display: block; }
 li:hover > .tooltip { display: block; }
 
@@ -127,8 +130,8 @@ ul,ol {
  clear:both;
  padding:0;
  margin: 0;
- list-style-type: none;
 }
+ul { list-style-type: none; }
 ul ul,ul ol,ol ol,ol ul { margin-bottom:0; }
 
 hr { clear:both; }
@@ -153,7 +156,7 @@ a.wp {
  background-repeat: no-repeat;
 }
 
-li h4 { margin-top: 0.75em; }
+li.cat { margin-top: 0.75em; }
 
 .content {
  text-align: center;

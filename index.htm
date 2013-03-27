@@ -19,15 +19,19 @@
   <a href="http://guides.railsgirls.com">RailsGirls Guides</a>
  </div>
 
- <div><a>About</a>
+ <div id="about"><a><span class="txt">About</span><span class="short">?</span></a>
   <div class="tooltip">
-   This cheat sheet is intended as a short overview of how the Web works.
-   It was made for RailsGirls, so it's oriented for MVC frameworks and Ruby.
+   This cheat sheet is intended as a short overview of how the Web works.<br />
+   It was made for <a href="http://railsgirls.com">RailsGirls</a>, so it's oriented for MVC frameworks and Ruby.<br />
+   <hr />
+   <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr">
+     <img alt="CC-BY-SA" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="height:31px;width:88px" /></a><br />
+     This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://maitre-du-monde.fr" property="cc:attributionName" rel="cc:attributionURL">Sylvain Abélard</a> is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA Creative Commons 3.0 License</a>.
   </div>
  </div>
 
  <div id="flags" class="tabs">
-  <a id="en" href="./index.htm">EN</a>
+  <!-- <a id="en" href="./index.htm">EN</a> -->
   <a id="fr" href="./fr.htm">FR</a>
   <a id="es" href="./es.htm">ES</a>
  </div>
@@ -98,14 +102,14 @@
     <div class="tooltip">
       HTML is a "language" we use to describe interface and content.
       It's what your code sends back, and what your browser displays.
-      <br />
-      <a class="wp" href="http://en.wikipedia.org/wiki/HTML">HTML</a>
+      <br /><a class="wp" href="http://en.wikipedia.org/wiki/HTML">HTML</a>
     </div>
   </li>
   <li id="css">CSS
     <div class="tooltip">
       CSS is a "language" to describe how you apply styles in your HTML page.
       It's used to separate the form (colors, layout) from the content (HTML).
+      <br /><a class="wp" href="http://en.wikipedia.org/wiki/CSS">CSS</a>
     </div>
   </li>
   <li id="js">JS
@@ -113,6 +117,7 @@
       JavaScript is a language that runs on the client-side.
       If we want to make some smart behaviour to your users, without
       the usual request / page rendering cycle, you'd use JS.
+      <br /><a class="wp" href="http://en.wikipedia.org/wiki/JavaScript">JavaScript</a>
     </div>
   </li>
   <li id="ajax">AJAX
@@ -121,6 +126,7 @@
       data from the server, but still want to avoid the usual request
       / page rendering. You'd ask for a little data in XML or JSON,
       or some HTML smippet. We call this an AJAX request.
+      <br /><a class="wp" href="http://en.wikipedia.org/wiki/AJAX">AJAX</a>
     </div>
   </li>
   <li id="cookies">Cookies
@@ -129,6 +135,7 @@
       They are sent to the server with each request, allowing to
       remember you language, some settings, or identifying you uniquely.
       The server can also write cookies.
+      <br /><a class="wp" href="http://en.wikipedia.org/wiki/HTTP_cookie">HTTP cookie</a>
     </div>
   </li>
   <li id="url_uri">URL
@@ -137,12 +144,14 @@
       By the way, this means Universal Resource (Locator, Identifier).
       They are supposed to point to the exact same resource each time,
       but we developers have overlooked this far too often.
+      <br /><a class="wp" href="http://en.wikipedia.org/wiki/URL">URL</a>
     </div>
   </li>
   <li id="dns">DNS
     <div class="tooltip">
       Computers cannot find each other by name, but by IP.<br />
       Domain Name Service is some kind of address book which do exactly this.
+      <br /><a class="wp" href="http://en.wikipedia.org/wiki/Domain_Name_System">DNS</a>
     </div>
   </li>
   <li id="framework">Framework
@@ -153,6 +162,7 @@
       express things. It encourages code reuse and some practices.<br />
       A framework also lives with its community and tools around it,
       like testing, deploying to production servers, and so on.
+      <br /><a class="wp" href="http://en.wikipedia.org/wiki/Web_application_framework">Web Application Framework</a>
     </div>
   </li>
   <li id=""></li>
@@ -183,6 +193,7 @@
 	  That's the application you use to browse the Internet.<br />
 	  Examples: Firefox, Chrome, Safari, Opera...
 	  there's Internet Explorer too, but we developers love to hate it ;)
+      <br /><a class="wp" href="http://en.wikipedia.org/wiki/Web_browser">Web browser</a>
 	</div>
       </div>
     </div>
@@ -198,6 +209,7 @@
 	  Who you are: it depends, but mostly your IP (who to answer to),
           some imformation about your computer (browser you use, screen size, cookies).
 	  What you want: the URL and some parameters.
+      <br /><a class="wp" href="http://en.wikipedia.org/wiki/HTTP">See Request in HTTP</a>
 	</div>
       </div>
     </div>
@@ -210,6 +222,7 @@
 	  The Internet is a series of tubes?
 	  More like a mesh of servers, linked by connections like cable,
 	  fiber, wifi or satellite links.
+      <br /><a class="wp" href="http://en.wikipedia.org/wiki/Computer_network">Computer Network</a>
 	</div>
      </div>
     </div>
@@ -221,6 +234,7 @@
 	<div class="tooltip">
 	  You asked a question, the web server answers you.
 	  This is the response you waited, with your carefully crafted content.
+      <br /><a class="wp" href="http://en.wikipedia.org/wiki/HTTP">See Response in HTTP</a>
 	</div>
       </div>
     </div>
@@ -236,6 +250,7 @@
 	  or a piece of software which purpose is to handle your request,
 	  then calling any other piece of software the programmers decide,
 	  then sending back a response.
+      <br /><a class="wp" href="http://en.wikipedia.org/wiki/Web_Server">Web Server</a>
 	</div>
      </div>
     </div>
@@ -258,8 +273,12 @@
       <div>Routing
 	<div class="tooltip">
 	  There are plenty of things you can do,
-	  so there are plenty of code bits too.
+	  so there are plenty of code bits too.<br />
 	  The routing is responsible for calling the right piece of code.
+      <br /><a class="wp">&empty;</a><br />
+      <a href="http://guides.rubyonrails.org/routing.html">
+	  Each framework has its kind of routing, so here is how
+	  Ruby on Rails' routing work.</a>
 	</div>
      </div>
     </div>
@@ -276,6 +295,7 @@
 	  the web server, so we often like to separate them, just in case
 	  the full-fledged App Server is not required and the Web Server
 	  is enough to do the job.
+      <br /><a class="wp" href="http://en.wikipedia.org/wiki/Application_Server">Application Server</a>
 	</div>
      </div>
     </div>
@@ -286,6 +306,7 @@
       <div>Views
 	<div class="tooltip">
 	  Views are mostly HTML snippets, with placeholders the Controller will fill.
+      <br /><a class="wp" href="http://en.wikipedia.org/wiki/Model–View–Controller">View in MVC</a>
 	</div>
       </div>
     </div>
@@ -301,6 +322,7 @@
 	  right pieces of data from the Model, run the View, and send you
 	  back some kind of response: content, files, or maybe a redirection,
 	  which is his way of saying "someone else should handle this".
+      <br /><a class="wp" href="http://en.wikipedia.org/wiki/Model–View–Controller">Controller in MVC</a>
 	</div>
      </div>
     </div>
@@ -312,11 +334,12 @@
 	<div class="tooltip">
 	  If you use and MVC framework, the Controller asks the Model for data.
 	  The model knows some business logic, and connects to the database.<hr />
-	  How to know if code should go into the model or controller? If<ul>
+	  How to know if code should go into the model or controller? If<ol>
 	    <li>you make something that is not a web app, and the rules would be the same</li>
 	    <li>you make several applications, and this logic is the same across all these</li>
 	    <li>the controller is too long, you should probably put some code in the model to "help" it</li>
-	  </ul>
+	  </ol>
+      <br /><a class="wp" href="http://en.wikipedia.org/wiki/Model–View–Controller">Model in MVC</a>
 	</div>
       </div>
     </div>
@@ -332,6 +355,7 @@
 	  The database is where your data is stored safely.
 	  These run very specialized software, optimised for fast search and/or high availability.<br />
 	  Each one ensures some properties, like keeping the data even if there is a power outage.
+      <br /><a class="wp" href="http://en.wikipedia.org/wiki/Database">Database</a>
 	</div>
      </div>
     </div>
