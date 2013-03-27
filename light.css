@@ -3,12 +3,12 @@
 
 body {
  font-family: Quicksand, Helvetica, Arial, sans-serif;
- font-size: 16px;
- font-weight: 300;
- color: #555555;
- margin: 0;
-
  background-color: #F7F7F7;
+ font-weight: 300;
+ font-size: 16px;
+ color: #555555;
+ width: 100%;
+ margin: 0;
 }
 
 #navbar {
