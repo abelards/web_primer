@@ -7,15 +7,13 @@ Follow the journey of a web request, from your click to your reading the content
 * on mobile, touching instead of clicking ;)
 
 ## TODO
+* more languages
 * use pretty icons
 * get people's feedback on the idea and texts
+* Social Shares: https://github.com/panzi/SocialSharePrivacy
 * use JS Plumb
     - to make it clear? http://jsplumbtoolkit.com/jquery/flowchartConnectorsDemo.html
     - to make a game? http://jsplumbtoolkit.com/jquery/draggableConnectorsDemo.html
-* Wikipedia links
-* Languages
-* Links to RailsGirls curriculum
-
 
 ## Why?
 Our lives increasingly depends on computers and networks ; especially the Internet and web applications.

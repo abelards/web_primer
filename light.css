@@ -164,13 +164,6 @@ li.cat { margin-top: 0.75em; }
  clear: both;
 }
 
-#navigation {
- position: absolute;
- text-align: right;
- width: 100%;
- height: 3em;
-}
-
 .short { display: none; }
 .alt { display: none; }
 .tab {display: none;}
@@ -208,7 +201,7 @@ li.cat { margin-top: 0.75em; }
   position: relative;
   padding: 0.25em;
   min-height: 7.5em;
-  width: 98%;
+  width: 100%;
   margin: auto;
  }
 
