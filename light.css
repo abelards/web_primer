@@ -59,6 +59,20 @@ li:hover { background-color: #D3360B; }
   margin: 0.75em;
 }
 
+.group, .item {
+  transition: box-shadow 0.75s ease;
+  border-radius: 2px;
+}
+
+.group:hover {
+  box-shadow: #888888 0px 0px 10px;
+  color: #555555;
+}
+
+.item:hover {
+  box-shadow: inset #888888 0px 0px 10px;
+}
+
 .active, .focus, .item.active { background-color: #FFAA88; }
 .tooltip { display:none; text-align: left; }
 div:hover > .tooltip { display: block; }
@@ -201,7 +215,7 @@ li.cat { margin-top: 0.75em; }
   position: relative;
   padding: 0.25em;
   min-height: 7.5em;
-  width: 100%;
+//  width: 100%;
   margin: auto;
  }
 
@@ -223,7 +237,6 @@ li.cat { margin-top: 0.75em; }
  .lng { display:none; }
  #GitHubFork { display: none; }
  #sidebar .keywords { display:none; }
- #sidebar .content {width: 25em; }
  #sidebar { min-height: 7em; }
 }
 
