@@ -27,6 +27,7 @@ body {
 #navbar div { float: left; margin: 0.25em 0; padding: 0 0.5em;
   border-right: 1px solid #FFAA88; }
 #navbar div.tooltip { border-right: 1px solid #6F1607; }
+#navbar .nob { border-right: none; }
 
 #navbar a { font-weight: bold; color: white; }
 #flags li { width: 2.5em; text-align: center; }
@@ -97,7 +98,7 @@ li:hover > .tooltip { display: block; }
  font-size: 80%;
 }
 
-.up, .noup { float: right; }
+.up, .noup, .fr { float: right; }
 .down, .ret, .nodown { float: left; }
 .up:before { content: '\2191' }
 .down:before { content: '\2193' }
@@ -151,12 +152,12 @@ ul ul,ul ol,ol ol,ol ul { margin-bottom:0; }
 hr { clear:both; }
 .fl { float:left; margin-left:1em; }
 
-h1 { font-size:36px; line-height:45px; font-weight:300;
+h1 { font-size:32px; line-height:45px; font-weight:300;
      font-family: Quicksand, Helvetica, sans-serif;
      text-align: center; }
-h2 { font-size:32px; line-height:32px; font-weight:400;
+h2 { font-size:28px; line-height:32px; font-weight:400;
      margin-top: 0.5em; }
-h3 { font-size:22px; line-height:32px; font-weight:400;
+h3 { font-size:20px; line-height:32px; font-weight:400;
      padding-left: 0.5em; }
 
 a { color:#D3360B; text-decoration:none; font-weight:500; }
@@ -215,7 +216,6 @@ li.cat { margin-top: 0.75em; }
   position: relative;
   padding: 0.25em;
   min-height: 7.5em;
-//  width: 100%;
   margin: auto;
  }
 
@@ -224,7 +224,7 @@ li.cat { margin-top: 0.75em; }
  ul li { float: left; }
 
  #sidebar { min-height: 10em; }
- #sidebar .content {margin: 0 auto; }
+ #sidebar .content { margin: 0 auto; }
 }
 
 @media screen and (max-width:700px) {
@@ -232,15 +232,16 @@ li.cat { margin-top: 0.75em; }
 }
 
 @media screen and (max-width:600px) {
- .tab { display:inline; }
- p.tab { display:block; }
- .lng { display:none; }
+ .tab { display: inline; }
+ p.tab { display: block; }
+ .lng { display: none; }
  #GitHubFork { display: none; }
- #sidebar .keywords { display:none; }
+ #sidebar .keywords { display: none; }
  #sidebar { min-height: 7em; }
 }
 
 @media screen and (max-width:450px) {
- .txt { display:none; }
+ .txt { display: none; }
  .short { display: inline; }
+ ul li { float: left; width: 49%;}
 }
