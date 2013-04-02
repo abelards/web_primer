@@ -243,5 +243,5 @@ li.cat { margin-top: 0.75em; }
 @media screen and (max-width:450px) {
  .txt { display: none; }
  .short { display: inline; }
- ul li { float: left; width: 49%;}
+ ul li { float: left; width: 47%; }
 }
