@@ -141,11 +141,12 @@ img {
 }
 a img { width: 16px; height: 16px; }
 
-ul,ol {
+ul {
  clear:both;
  padding:0;
  margin: 0;
 }
+
 ul { list-style-type: none; }
 ul ul,ul ol,ol ol,ol ul { margin-bottom:0; }
 
