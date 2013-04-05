@@ -1,5 +1,5 @@
 # Web Architecture Primer
-Get a visual overview of how your everyday web apps work.
+**A visual overview of how your everyday web apps work.**
 
 Get the jargon out of the way and grasp an understanding of the 'Big Picture'
 

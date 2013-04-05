@@ -35,6 +35,8 @@ body {
 #navbar #about hr { display: block; border-color: #C2260D; }
 #navbar #about .tooltip a { color: #C2260D; text-decoration: underline; }
 
+#cc_by_sa { height: 31px; width: 88px; margin-left: 55px; }
+
 #sidebar { background: #F3562B; color: white; }
 #sidebar .content { width: 100%;  text-align: left; }
 #sidebar p { margin: 0; }
