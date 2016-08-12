@@ -1,7 +1,7 @@
 # Web Architecture Primer
 **Uma interativa visão geral de como funciona, corriqueiramente, sua aplicação web.**
 
-Retire o jargão do seu caminho e retenha visão do todo 
+Retire o jargão do seu caminho e retenha uma visão do todo.
 
 Siga a jornada de uma requisição web, do seu click até a leitura do conteúdo do qual você requisitou.
 
