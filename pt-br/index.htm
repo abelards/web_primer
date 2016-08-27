@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Arquitetura Web - introdução</title>
+    <meta name="author" content="Sylvain Abélard" />
+    <meta content="True" name="HandheldFriendly" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="/web_primer/light.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <script type="text/javascript" src="/web_primer/webarch.js"></script>
+  </head>
+  <body>
+
+<div id="navbar">
+ <div id="railsgirls">
+  <a href="http://guides.railsgirls.com">
+    <img src= "/web_primer/img/rg_heart.png" title="RailsGirl's heart" />
+    Guides <span class="txt">RailsGirls</span></a>
+ </div>
+
+ <div id="about"><a><span class="txt">Sobre</span><span class="short">?</span></a>
+  <div class="tooltip">
+   Como funciona a Internet? Vamos recapitular juntos em uma folha.<br />
+   Criado por <a href="http://railsgirls.com">RailsGirls</a>, portanto, direcionado à Ruby e frameworks MVC.<br />
+   <hr />
+   <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr">
+     <img alt="CC-BY-SA" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" id="cc_by_sa" /></a><br />
+     Esta página de <a xmlns:cc="http://creativecommons.org/ns#" href="http://maitre-du-monde.fr" property="cc:attributionName" rel="cc:attributionURL">Sylvain Abélard</a> está sob licença <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0</a>,
+   uma licença Creative Commons
+  </div>
+ </div>
+
+  <div><a href="/web_primer/">EN</a><div class="tooltip">English version</div></div>
+  <div><a href="/web_primer/fr">FR</a><div class="tooltip">En français</div></div>
+  <div><a>ES</a><div class="tooltip">Español - disponible en breve</div></div>
+
+ <div id="gh_fork">
+   <a class="tab" href="https://github.com/abelards/web_primer" title="Fork me on GitHub">
+     <span class="txt">Fork on GitHub</span>
+     <span class="short"><img src= "/web_primer/img/gh32.png" title="GitHub's octocat" /></span>
+   </a>
+ </div>
+ <a id="GitHubFork" href="https://github.com/abelards/web_primer" title="Fork me on GitHub"></a>
+</div>
+
+ <div class="content" id="title">
+ <h1><a title="Web Architecture" href="http://maitre-du-monde.fr/web_primer/index.fr.htm">
+  Arquitetura Web
+ </a></h1>
+
+ <h3>A
+   <span class="txt">maravilhosa</span>
+   jornada de uma pequena requisição.
+ </h3>
+</div>
+
+<div id="sidebar">
+<div class="content">
+ <p class="help">
+  <span class="lng">Passe seu mouse sobre as palavras</span>
+  ou diagrama para mais informação
+ </p>
+
+<div class="keywords">
+ <h2>Palavras-chave</h2>
+ <ul>
+  <li id="client_side" class="cat"><h4>Lado cliente</h4></li>
+  <li id="user">Usuáriop</li>
+  <li id="browser">Navegador</li>
+
+  <li id="internet" class="cat"><h4>Internet</h4></li>
+  <li id="request">Requisição</li>
+  <li id="network">Rede</li>
+  <li id="response">Resposta</li>
+
+  <li id="web_server" class="cat"><h4>Servidor Web</h4></li>
+  <li id="server">Servidor</li>
+  <li id="files">Arquivos</li>
+  <li id="routing">Roteamento</li>
+
+  <li id="application" class="cat"><h4>Aplicação</h4></li>
+  <li id="app_server">Aplicação Servidor</li>
+  <li id="controller">Controlador</li>
+  <li id="model">Modelo</li>
+  <li id="view">Visão</li>
+
+  <li id="databases" class="cat"><h4>BDD</h4></li>
+  <li id="db">Banco de dados</li>
+
+ </ul>
+</div>
+
+<div class="vocabulary">
+  <h2>Vocabulaire</h2>
+
+ <ul id="technical">
+  <li id="html">HTML
+    <div class="tooltip">
+	  HTML é uma "linguagem" utilizada para descrever uma interface e seu conteúdo.
+	  É o que seu conde envia, e o que seu navegador apresenta.
+      <br /><a class="wp" href="http://pt.wikipedia.org/wiki/HTML">HTML</a>
+    </div>
+  </li>
+  <li id="css">CSS
+    <div class="tooltip">
+	  CSS é uma "linguagem" que descreve regras de apresentação para sua página HTML.
+	  Utilizamos para separar a forma (cores, posição) do conteúdo (HTML).
+      <br /><a class="wp" href="http://pt.wikipedia.org/wiki/CSS">CSS</a>
+    </div>
+  </li>
+  <li id="js">JS
+    <div class="tooltip">
+      JavaScript é uma linguagem que é executada no lado cliente (navegador).
+	  Se a gente quiser prover um comportamento dinâmico aos usuários,
+	  sem passar por um ciclo habitual requisição/apresentação, utilizamos JS.
+	  Existem frameworks front-end (lado cliente), mas também frameworks back-end lado servidor, la onde nós utilizaríamos Ruby.
+	  É um pouco confuso quando procuramos na documentação,
+	  mas é importante, sempre deixar claro, de qual uso de JS estamos falando.
+      <br /><a class="wp" href="http://pt.wikipedia.org/wiki/JavaScript">Javascript</a>
+    </div>
+  </li>
+  <li id="ajax">AJAX
+    <div class="tooltip">
+	  Às vezes, para algum comportamento dinâmico, você gostaria um pouco 
+	  mais de dados do servidor, mas sempre evitando o recarregamento da página.
+	  Você requisita novas informações em XML ou JSON, ou mesmo HTML.
+	  É o que denominamos requisição AJAX.
+      <br /><a class="wp" href="http://pt.wikipedia.org/wiki/AJAX">AJAX</a>
+    </div>
+  </li>
+  <li id="cookies">Cookies
+    <div class="tooltip">
+	  Estes são informações que o nevagador conserva.<br />
+	  Enviamos ao servidor a cada requisição, permitindo-o se lembrar da sua linguagem,
+	  da seu login, entre outras coisas...
+	  O servidor pode também modificar um cookie na sua resposta (retorno).
+      <br /><a class="wp" href="http://pt.wikipedia.org/wiki/Cookie_HTTP">Cookie</a>
+    </div>
+  </li>
+  <li id="url_uri">URL
+    <div class="tooltip">
+	  O que você vê e escreve na barra de endereço do navegador.<br />
+	  À propósito, significa Uniform Resource Locator, que em tradução livre 
+	  para o português significa algo como "Localizador Uniforme de Recurso".
+	  É suposto que eles apontem sempre ao mesmo recurso, mesmo se nos, desenvolvedores, 
+	  com frequência esquecemos.
+      <br /><a class="wp" href="http://pt.wikipedia.org/wiki/URL">URL</a>
+    </div>
+  </li>
+  <li id="dns">DNS
+    <div class="tooltip">
+	  Os computadores não se acham por um nome mas por um número, seu IP.<br />
+      O DNS (Domain Name Service) é uma espécie de catálogo de endereços compartilhado.
+      <br /><a class="wp" href="http://pt.wikipedia.org/wiki/DNS">DNS</a>
+    </div>
+  </li>
+  <li id="framework">Framework
+    <div class="tooltip">
+	  Um framework (conjunto de biblioteca) que enquadra seu trabalho. <br />
+	  Ele te permite fazer muitas coisas com pouco código,
+	  portanto, vai provavelmente formatar a maneira da qual você projeta 
+	  ou expressa as coisas. Ele te encoraja a reutilizar seu código e vai facilitar 
+	  algumas abordagens ou métodos de trabalho, em detrimento de outas.<br />
+	  Um framework vive principalmente pela sua comunidade e suas ferramentas,
+	  como as ferramentas de teste, de implantação (deploy), gestão de dependências e etc.
+      <br /><a class="wp" href="http://pt.wikipedia.org/wiki/Framework">Framework</a>
+    </div>
+  </li>
+  <li id=""></li>
+ </ul>
+
+</div></div>
+</div>
+
+<div class="content" id="page">
+
+  <div class="client_side group">Client
+    <div class="item user">
+      <div class="noup"></div>
+      <div class="down">1. Clique sobre um link ou digite uma URL no seu navegador.</div>
+      <div>Usuário
+	<div class="tooltip">É você :)
+	</div>
+      </div>
+    </div>
+
+    <div class="item browser">
+      <div class="up">18. Seu navegador apresenta o HTML, ou te informa sobre o que aconteceu.<br />
+		  A fim de ter interações mais ricas, é aqui, onde o Javascript entra em ação.
+      </div>
+      <div class="down">2. O navegador envia uma requisição.</div>
+      <div>Navegador
+	<div class="tooltip">
+	  É uma aplicação que você utiliza para navegar na Internet.<br />
+	  Exemplos : Firefox, Chrome, Safari, Opera...
+	  E também o Internet Explorer, mas os desenvolvedores adoram detestá-lo ;)
+      <br /><a class="wp" href="http://pt.wikipedia.org/wiki/Navegador_web">Navegador</a>
+	</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="internet group">Internet
+    <div class="item request">
+      <div class="noup"></div>
+      <div class="down">3. A requisição é enviada pela rede (Internet).</div>
+      <div>Requisição
+	<div class="tooltip">Ela carrega as informações sobre quem é você e o que você solicitou.
+	  Quem você é : isso pode depender, mas principalmente seu IP (ao qual responde),
+	  e informações sobre seu computador (navegador, tamanho do monitor e de onde você vem).
+	  O que você solicitou: A URL, os parâmetros, o conteúdo do formulário e todos os cookies.
+      <br /><a class="wp" href="http://pt.wikipedia.org/wiki/Hypertext_Transfer_Protocol#M.C3.A9todos_de_solicita.C3.A7.C3.A3o">Requisição HTTP</a>
+	</div>
+      </div>
+    </div>
+
+    <div class="item network">
+      <div class="up">17. Retorno !</div>
+      <div class="down">4. Rede de computadores, roteadores e equipamentos que vão encontrar onde sua requisição deveria ir.</div>
+      <div>Rede
+	<div class="tooltip">
+	  A Internet, uma série de tubos?
+	  Milhares de servidores, conectados por cabos, fibras, WI-FI, satélite...
+      <br /><a class="wp" href="https://fr.wikipedia.org/wiki/R%C3%A9seau_informatique">Rede de Computadores</a>
+	</div>
+     </div>
+    </div>
+
+    <div class="item response">
+      <div class="up">16. A resposta é retornada da mesma maneira que requisição é enviada.</div>
+      <div class="nodown"></div>
+      <div>Resposta
+	<div class="tooltip">Você perguntou (requisitou), o servidor te responde.
+		Esta é a resposta que você aguardava, com o conteúdo do qual você solicitou.
+      <br /><a class="wp" href="http://pt.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Hist.C3.B3ria">Resposta HTTP</a>
+	</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="web_server group">Servidor Web
+    <div class="item server">
+      <div class="up">15. O servidor Web envia o que o servidor de aplicação informou a ele.</div>
+      <div class="down">5. O servidor Web recebe a requisição, e verifica se ele pode te enviar enviar
+	  um arquivo ou se deve chamar outro sistema (software).</div>
+      <div>Servidor
+	<div class="tooltip">
+	  Isto pode significar uma máquina ou várias,
+	  ou um sistema do que o objetivo é gerenciar sua requisição,
+	  depois chamar outro sistema que os desenvolvedores escolheram,
+	  antes de enviar uma resposta.
+      <br /><a class="wp" href="http://pt.wikipedia.org/wiki/Servidor_web">Servidor Web</a>
+	</div>
+     </div>
+    </div>
+
+    <div class="item files">
+      <div class="up">&nbsp; Arquivos são enviados de volta diretamente.</div>
+      <div class="ret">O servidor Web pode encontrar um arquivo e para enviar diretamente.</div>
+      <div>Arquivos
+	<div class="tooltip">
+	  Se não há de muito inteligente envolvido e você solicitou um arquivo "estático"
+	  como uma imagem (não é susposto mudar com frequência), o servidor pode, diretamente, enviar de volta
+	  evititando a chamada do código "mais inteligente".
+	</div>
+     </div>
+    </div>
+
+    <div class="item routing">
+      <div class="noup"></div>
+      <div class="down">6. Achamos quem será responsável por responder a requisição seguindo as 
+	  regras de roteamento (do servidor web, servidor de aplicação ou os dois).</div>
+      <div>Roteamento
+	<div class="tooltip">
+	  Há muitas coisas que a gente pode fazer aqui, portanto há muito códigos também.<br />
+	  O roteamento é responsável de encontrar e chamar o código correto.
+      <br /><a class="wp">&empty;</a><br />
+      <a href="http://guides.rubyonrails.org/routing.html">
+		  Cada framework tem sua maneira de fazer o roteamento, veja aqui o do Ruby on Rails.</a>
+	</div>
+     </div>
+    </div>
+  </div>
+
+
+  <div class="application group">Aplicação
+    <div class="item app_server">
+      <div class="up">14. Envia de volta o conteúdo : HTML (visão), dados brutos (XML/JSON), status (OK ou código de erro), ou um redirecionamento.</div>
+      <div class="down">7. É aqui que a gente interfere via código!</div>
+      <div>Servidor de aplicação
+	<div class="tooltip">
+	  O servidor de aplicação faz o código ser executado. Ele precisa
+	  fazer coisas um pouco diferentes que o servidor Web, é por isso que 
+	  amamos separá-los, principalmente no caso onde não precisamos de todo o poder do servidor de aplicação e
+	  o servidor Web é suficiente para o trabalho.	  
+      <br /><a class="wp" href="http://pt.wikipedia.org/wiki/Servidor_de_aplica%C3%A7%C3%A3o">Servidor de aplicação</a>
+	</div>
+     </div>
+    </div>
+
+    <div class="item view">
+      <div class="up">13. "renderizamos" a visão a partir dos dados que são obtidos.</div>
+      <div class="nodown"></div>
+      <div>Visão
+	<div class="tooltip">
+	  As "views" são principalmente pedaços de HTML, com locais para os dados que o Controlador esteve buscando.
+      <br /><a class="wp" href="http://pt.wikipedia.org/wiki/MVC#Intera.C3.A7.C3.A3o_dos_componentes">MVC - Visão</a>
+	</div>
+      </div>
+    </div>
+
+    <div class="item controller">
+      <div class="up">12. O controlador pode também aplicar regras de negócio uma vez que os dados são obtidos pelo modelo.</div>
+      <div class="down">8. O servidor de aplicação chama uma ação para lidar com a requisição.</div>
+      <div>Controlador
+	<div class="tooltip">
+	  Se você utiliza um framework MVC, o controlador gerencia a requisição.
+	  Seu trabalho é executar as regras da aplicação.<hr />
+	  Ele pode por exemplo fazer verificações de segurança, regras de acesso,
+	  e pedir ao Modelo as informações adequadas, para excutar a visão e 
+	  te retornar uma resposta: conteúdo, arquivos ou talvez um redirecionamento, isto é,
+	  sua maneira de dizer ""
+	  et vous renvoyer une réponse : contenu, fichiers, ou peut-être une redirection,
+	  c'est à dire sa manière de dire "Não é minha responsabilidade, solicite lá".
+      <br /><a class="wp" href="http://pt.wikipedia.org/wiki/MVC#Intera.C3.A7.C3.A3o_dos_componentes">MVC - Controlador</a>
+	</div>
+     </div>
+    </div>
+
+    <div class="item model">
+      <div class="up">11. O modelo pode também aplicar as regras voltadas aos dados que ele recupera.</div>
+      <div class="down">9. Pedimos ao modelo buscar ou cruzar os dados.</div>
+      <div>Modelo
+	<div class="tooltip">
+	  Se você utiliza um framework MVC, o Controlador solicita os dados ao Modelo.
+	  O modelo conhece as regras da tarefa, e se conecta ao banco de dados.<hr />
+	  Como saber se o código deveria estar no Modelo ou no Controlador? Se <ol>
+	    <li>você fizer alguma coisa que não está na aplicação Web, e as regras seriam as mesmas</li>
+	    <li>você fizer várias aplicações, e esta regra seria identica entre elas</li>
+	    <li>o controlador é muito grande, você deveria, provavelmente, delegar 
+		algumas regras ao modelo</li>
+	  </ol>
+      <br /><a class="wp" href="http://pt.wikipedia.org/wiki/MVC#Intera.C3.A7.C3.A3o_dos_componentes">MVC - Modelo</a>
+	</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="databases group">Banco de Dados
+    <div class="item db">
+      <div class="up">10. O banco de dados pesquisa ou escreve os dados (informações).</div>
+      <div class="ret"></div>
+      <div>Banco de dados
+	<div class="tooltip">
+	  O banco de dados é onde seus dados são conservados.
+	  Ele utiliza programas especializados, otimizados para pesquisas rápidas e/ou alta disponibilidade.<br />
+	  Cada um oferece certo número de propriedades, como conservar os dados mesmo se houver falta de energia.
+      <br /><a class="wp" href="https://pt.wikipedia.org/wiki/Banco_de_dados">Banco de dados</a>
+	</div>
+     </div>
+    </div>
+  </div>
+
+ </div>
+
+</body>
+</html>
